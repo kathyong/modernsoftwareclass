@@ -10,7 +10,7 @@ load_dotenv()
 # Access the OpenAI API key
 openai_api_key = os.getenv("OPENAI_API_KEY")
 if not openai_api_key:
-    raise ValueError("OpenAI API key not found. Ensure it is set in the .env file.")
+    raise ValueError("OpenAI API key not found. Set OPENAI_API_KEY as an environment variable or in the .env file. (For CI, add it to GitHub Secrets and export it as an env var.)")
 
 router = APIRouter()
 
